@@ -5,8 +5,6 @@ import { SingleCoin } from '../config/api';
 import CoinInfo from '../components/CoinInfo';
 import { Box, Container, LinearProgress, Typography, useTheme } from '@mui/material';
 import { numCommas } from './../components/banner/Carousel';
-import  ReactHtmlParser from 'react-html-parser';
-
 
 const CoinPage = () => {
     const {id} = useParams();
@@ -75,7 +73,7 @@ const CoinPage = () => {
                     textAlign:'justify',
                     padding:'25px'
                     }}>
-                    {ReactHtmlParser(coin?.description.en.split('. ')[0])}.
+                    {coin?.description.en.split('. ')[0]}.
                 </Typography>
                 <Box 
                 sx={{
